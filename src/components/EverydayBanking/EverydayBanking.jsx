@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import classNames from "classnames";
+
 import Layout from "../Layout";
 import Welcome from "./Welcome";
-
-import classes from "./EverydayBanking.module.scss";
-import classNames from "classnames";
 import Payment from "./Payment";
 import Calculator from "./Calculator";
+
+import classes from "./EverydayBanking.module.scss";
+
 const EverydayBanking = () => {
   const [selectedTab, setSelectedTab] = useState("payment");
+
   return (
     <Layout>
       <div className={classes.wrapper}>

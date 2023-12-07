@@ -3,6 +3,7 @@
 .cardWrapper {
   width: 100%;
   background-color: $cream;
+  color: $dark-brown;
 
   .colorHeader {
     padding: 10px;
@@ -11,7 +12,9 @@
     h4 {
       margin: 0;
       color: $white;
+      font-weight: 800;
     }
+
     .triangleDown {
       position: absolute;
       bottom: -13px;

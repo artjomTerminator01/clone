@@ -10,7 +10,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar setBackDrop={setBackDrop} />
-      <div className={backDrop && classes.backdrop} />
+      <div
+        className={backDrop && classes.backdrop}
+        onMouseEnter={() => setBackDrop(false)}
+      />
       {children}
       <Footer />
     </>

@@ -11,7 +11,7 @@ const InfoCard = ({ title, color, subtitle, text, readMore, points }) => {
             classes.triangleDown,
             classes[`triangleDown__${color}`]
           )}
-        ></div>
+        />
         <h4>{title}</h4>
       </div>
       <div className={classes.textBox}>

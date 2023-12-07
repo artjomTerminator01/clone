@@ -89,7 +89,7 @@ const Footer = () => {
                   src="assets/arrow.svg"
                   beforeInjection={(svg) => {
                     svg.classList.add(classes.arrow);
-                    toggledTitles[index] &&
+                    !toggledTitles[index] &&
                       svg.classList.add(classes.arrow__active);
                   }}
                 />
@@ -98,7 +98,7 @@ const Footer = () => {
               {column.links.map((link, indexC) => (
                 <div
                   key={indexC}
-                  className={toggledTitles[index] && classes.hideLinks}
+                  className={!toggledTitles[index] && classes.hideLinks}
                 >
                   <p className={classes.link}>▸ {link.title}</p>
                 </div>

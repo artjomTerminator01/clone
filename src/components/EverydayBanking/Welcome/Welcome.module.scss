@@ -2,10 +2,10 @@
 @import "../../../styles/mixins";
 
 .welcomeWrapper {
-  background-color: $mint;
-  padding: 16px 16px 32px 16px;
   display: flex;
   gap: 16px;
+  padding: 16px 16px 32px 16px;
+  background-color: $mint;
 
   @include breakpoint(medium) {
     flex-direction: column;
@@ -14,14 +14,14 @@
   }
 
   .bubble {
-    height: 120px;
-    min-width: 120px;
-    border-radius: 50%;
-    background-color: $yellow;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 120px;
+    min-width: 120px;
+    background-color: $yellow;
+    border-radius: 50%;
 
     @include breakpoint(medium) {
       width: 120px;
@@ -29,9 +29,9 @@
     }
 
     &__text {
-      color: $white;
       font-size: 15px;
-      font-weight: bold;
+      font-weight: 800;
+      color: $white;
     }
 
     &__triangle {
@@ -50,13 +50,14 @@
     &__title {
       margin: 0;
       margin-bottom: 10px;
+      font-weight: 800;
     }
 
     &__text {
-      font-size: 12px;
-      word-wrap: break-word;
       margin: 0;
       margin-bottom: 32px;
+      font-size: 12px;
+      word-wrap: break-word;
       color: $dark-grey;
 
       @include breakpoint(medium) {
@@ -65,10 +66,10 @@
     }
 
     .readMore {
+      margin: 0;
       font-size: 12px;
       color: $dark-aqua;
       text-decoration: none;
-      margin: 0;
       cursor: pointer;
 
       &__triangle {
@@ -80,9 +81,10 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
+
       @include breakpoint(medium) {
-        gap: 12px;
         flex-direction: column;
+        gap: 12px;
       }
     }
   }

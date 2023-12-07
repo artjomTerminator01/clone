@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 16px;
     margin-right: 40%;
+    margin-bottom: 16px;
 
     @include breakpoint(medium) {
       margin-right: auto;
@@ -22,6 +22,7 @@
 
       @include breakpoint(medium) {
         flex-direction: column;
+        text-align: left;
       }
 
       label {
@@ -29,7 +30,6 @@
 
         @include breakpoint(medium) {
           margin-top: 4px;
-          text-align: left;
         }
       }
 
@@ -60,6 +60,7 @@
       }
 
       .textInputWrapper {
+        display: flex;
         flex-direction: column;
       }
     }

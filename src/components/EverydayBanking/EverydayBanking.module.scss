@@ -3,11 +3,12 @@
 
 .wrapper {
   background-color: $cream;
+  color: $dark-brown;
 
   .container {
-    max-width: $desktop-width;
     margin: auto;
     padding: 12px 0 32px;
+    max-width: $desktop-width;
 
     @include breakpoint(large) {
       max-width: 900px;
@@ -20,22 +21,28 @@
     }
 
     .title {
-      color: $orange;
-      padding: 0 0 12px 12px;
       margin: 0;
+      padding: 0 0 12px 12px;
       font-size: 32px;
       font-weight: 800;
+      color: $orange;
+
+      @include breakpoint(medium) {
+        font-size: 24px;
+      }
     }
 
     .tabsWrapper {
       display: flex;
+
       @include breakpoint(medium) {
         margin: 0 12px;
       }
+
       .tab {
-        background-color: $grey;
         margin: 0;
         padding: 14px;
+        background-color: rgba($grey, 0.5);
         cursor: pointer;
 
         &__selected {
@@ -45,10 +52,10 @@
     }
 
     .card {
-      background-color: $white;
+      margin-bottom: 10px;
       padding: 20px;
       gap: 12px;
-      margin-bottom: 10px;
+      background-color: $white;
 
       @include breakpoint(medium) {
         margin: 0 12px 10px 12px;

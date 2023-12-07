@@ -10,10 +10,7 @@ const Navbar = ({ setBackDrop }) => {
   const [showTabs, setShowTabs] = useState(false);
 
   return (
-    <div
-      onMouseEnter={() => setBackDrop(true)}
-      onMouseLeave={() => setBackDrop(false)}
-    >
+    <div onMouseEnter={() => setBackDrop(true)}>
       <div className={classes.borderTop} />
       <div className={classes.header}>
         <a href="/">
@@ -23,12 +20,34 @@ const Navbar = ({ setBackDrop }) => {
             alt="logo"
           />
         </a>
-        <img
-          onClick={() => setShowTabs(!showTabs)}
-          className={classes.burger}
-          src="assets/burger-menu.svg"
-          alt="burger-menu"
-        />
+
+        {showTabs ? (
+          <ReactSVG
+            src="assets/close.svg"
+            alt="close burger-menu"
+            className={classes.menuIconWrapper}
+            beforeInjection={(svg) => {
+              svg.classList.add(classes.close);
+            }}
+            onClick={() => {
+              setShowTabs(false);
+              setBackDrop(false);
+            }}
+          />
+        ) : (
+          <ReactSVG
+            src="assets/burger-menu.svg"
+            alt="burger-menu"
+            className={classes.menuIconWrapper}
+            beforeInjection={(svg) => {
+              svg.classList.add(classes.burger);
+            }}
+            onClick={() => {
+              setShowTabs(true);
+              setBackDrop(true);
+            }}
+          />
+        )}
       </div>
       <div
         className={classNames(

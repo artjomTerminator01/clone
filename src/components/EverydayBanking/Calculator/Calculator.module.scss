@@ -29,8 +29,8 @@
 
       .row {
         display: flex;
-        gap: 6px;
         align-items: center;
+        gap: 6px;
 
         &:first-child {
           margin-bottom: 16px;
@@ -46,25 +46,26 @@
 
           .sliderValue {
             position: absolute;
-            color: $orange;
             top: -40px;
+            color: $orange;
             font-size: 15px;
+            min-width: 80px;
           }
 
           .minPrice,
           .maxPrice {
             position: absolute;
             top: 10px;
-            font-size: 12px;
             color: $dark-grey;
-          }
+            font-size: 12px;
 
-          .minPrice {
-            left: 0;
-          }
+            &.minPrice {
+              left: 0;
+            }
 
-          .maxPrice {
-            right: 0;
+            &.maxPrice {
+              right: 0;
+            }
           }
         }
       }
@@ -72,22 +73,25 @@
   }
 
   .resultWrapper {
-    border-left: 1px solid $grey;
-    padding: 16px 0 0 16px;
+    display: flex;
+    flex-direction: column;
     width: 35%;
+    padding: 16px 0 0 16px;
+    border-left: 1px solid $grey;
 
     @include breakpoint(medium) {
-      border: none;
       width: auto;
+      padding-left: 0;
+      border: none;
     }
 
     .header {
-      width: 100%;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $grey;
-      margin-bottom: 24px;
       align-items: center;
+      width: 100%;
+      margin-bottom: 24px;
+      border-bottom: 1px solid $grey;
 
       .result {
         color: $orange;
@@ -103,8 +107,18 @@
 }
 
 .label {
-  font-size: 13px;
-  color: $dark-grey;
   margin: 0;
   margin-bottom: 8px;
+  font-size: 13px;
+  color: $dark-grey;
+
+  &__form {
+    min-width: 90px;
+    text-align: right;
+
+    @include breakpoint(medium) {
+      min-width: 60px;
+      text-align: left;
+    }
+  }
 }

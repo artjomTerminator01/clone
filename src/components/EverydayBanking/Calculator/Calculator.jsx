@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { useState, useEffect } from "react";
 import { Select } from "../../../ui";
 import classes from "./Calculator.module.scss";
@@ -33,7 +34,9 @@ const Calculator = () => {
       <div className={classes.formWrapper}>
         <div className={classes.form}>
           <div className={classes.row}>
-            <p className={classes.label}>Loan size</p>
+            <p className={classNames(classes.label, classes.label__form)}>
+              Loan size
+            </p>
             <div className={classes.slider}>
               <input
                 className="range"
@@ -56,24 +59,30 @@ const Calculator = () => {
             </div>
           </div>
           <div className={classes.row}>
-            <p className={classes.label}>Period</p>
+            <p className={classNames(classes.label, classes.label__form)}>
+              Period
+            </p>
             <Select
               value={formData.year}
               name="year"
               onChange={handleInputChange}
               options={[
+                { value: 20, text: "20 years" },
                 { value: 30, text: "30 years" },
                 { value: 40, text: "40 years" },
               ]}
             />
           </div>
           <div className={classes.row}>
-            <p className={classes.label}>Intress</p>
+            <p className={classNames(classes.label, classes.label__form)}>
+              Intress
+            </p>
             <Select
               value={formData.intress}
               name="intress"
               onChange={handleInputChange}
               options={[
+                { value: 3.5, text: "3.5 %" },
                 { value: 4.5, text: "4.5 %" },
                 { value: 5, text: "5 %" },
               ]}
