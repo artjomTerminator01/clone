@@ -1,0 +1,78 @@
+@import "../../../styles/mixins";
+
+.container {
+  padding-top: 16px;
+
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-right: 40%;
+
+    @include breakpoint(medium) {
+      margin-right: auto;
+    }
+
+    .row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      text-align: right;
+
+      @include breakpoint(medium) {
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 12px;
+
+        @include breakpoint(medium) {
+          margin-top: 4px;
+          text-align: left;
+        }
+      }
+
+      .inputsWrapper {
+        display: flex;
+        gap: 8px;
+        width: 400px;
+
+        @include breakpoint(medium) {
+          width: 100%;
+        }
+
+        .errorWrapper {
+          width: 100%;
+
+          p {
+            text-align: left;
+          }
+
+          .textInput {
+            width: 400px;
+          }
+        }
+
+        .currencyInput {
+          width: 180px;
+        }
+      }
+
+      .textInputWrapper {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .buttonsBox {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    @include breakpoint(medium) {
+      flex-direction: column;
+      gap: 6px;
+    }
+  }
+}

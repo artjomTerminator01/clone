@@ -1,0 +1,132 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.borderTop {
+  background: linear-gradient(to right, $orange, $yellow);
+  height: 3px;
+}
+
+.contactsWrapper {
+  background-color: $grey;
+  color: $dark-brown;
+
+  .contactsContainer {
+    margin: auto;
+    display: flex;
+    max-width: $desktop-width;
+
+    @include breakpoint(large) {
+      max-width: 900px;
+    }
+
+    @include breakpoint(medium) {
+      max-width: 600px;
+      flex-direction: column;
+      padding: 16px 0;
+    }
+
+    @include breakpoint(small) {
+      max-width: 400px;
+    }
+
+    .column {
+      width: 25%;
+
+      @include breakpoint(medium) {
+        width: auto;
+        padding: 0 16px;
+        border-bottom: 1px solid rgba($dark-grey, 0.4);
+      }
+
+      .email {
+        color: $dark-aqua;
+      }
+
+      .phone {
+        color: $orange;
+        font-weight: bold;
+        font-size: 32px;
+        margin: 0 0 12px;
+        font-family: HeadlineBlack, Helvetica, Arial, sans-serif;
+      }
+
+      .title {
+        margin: 8px 0 10px;
+        font-weight: 500;
+      }
+
+      .cridential {
+        margin: 4px 0;
+
+        &:first-of-type {
+          margin-top: 20px;
+        }
+      }
+
+      .hideLinks {
+        @include breakpoint(medium) {
+          display: none;
+        }
+      }
+
+      .link {
+        margin: 6px 0;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .mediaContainer {
+        display: flex;
+        gap: 8px;
+        margin: 20px 0;
+
+        img {
+          cursor: pointer;
+        }
+      }
+
+      .titleToggleWrapper {
+        @include breakpoint(medium) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+
+        .arrow {
+          @include breakpoint(medium) {
+            display: block;
+          }
+
+          display: none;
+          height: 15px;
+          width: 15px;
+          object-fit: contain;
+          transform: rotate(-90deg);
+
+          &__active {
+            transform: rotate(90deg);
+
+            path {
+              fill: $orange;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.text {
+  text-align: center;
+  max-width: 60%;
+  margin: 20px auto;
+  font-size: 12px;
+  color: $dark-grey;
+
+  @include breakpoint(medium) {
+    max-width: 100%;
+    font-size: 10px;
+    margin: 20px 4px;
+  }
+}

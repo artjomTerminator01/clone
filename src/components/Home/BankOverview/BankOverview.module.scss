@@ -1,0 +1,95 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.bankOverview {
+  background-color: $white;
+  padding: 24px 16px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: $dark-grey;
+
+  @include breakpoint(medium) {
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .downloadBar,
+  .downloadItem,
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .headerWrapper {
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .downloadBar {
+    gap: 6px;
+
+    p {
+      margin: 0;
+      color: $aqua;
+    }
+
+    .downloadItem {
+      gap: 4px;
+      cursor: pointer;
+    }
+  }
+
+  .tableHeaders {
+    background-color: $mint;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 10px;
+    border: none;
+
+    th,
+    td {
+      text-align: right;
+      padding: 8px;
+      .name {
+        color: $dark-aqua;
+      }
+    }
+
+    th:first-child,
+    td:first-child {
+      text-align: left;
+    }
+
+    .border {
+      border-bottom: 1px solid #e6e6e6;
+
+      .accountWrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    .totalAvailable {
+      font-size: 22px;
+      margin-right: 4px;
+      @include breakpoint(medium) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .hideOnMobile {
+    @include breakpoint(medium) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import "./variables";
+
+.text-input,
+.select-input {
+  padding: 12px 10px;
+  border: 1px solid $input-border;
+  border-radius: 3px;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.text-input {
+  width: calc(100% - 20px);
+
+  &__error {
+    border: 1px solid $error;
+  }
+}
+
+.select-input {
+  background-color: $mint;
+  padding-right: 24px;
+  width: 100%;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.dropdown-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+  right: 6px;
+  top: calc(50% - 6px);
+
+  &__triangle {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid $black;
+
+    &__up {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.label,
+.text-input,
+.select-input {
+  color: $dark-grey;
+  font-size: 15px;
+}
+
+.error-message {
+  color: $error;
+  margin: 4px 0 12px 10px;
+  font-size: 13px;
+}
+
+.range {
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  height: 10px;
+  background-color: $grey;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: $orange;
+  border-radius: 50%;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: $orange;
+  border-radius: 50%;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}

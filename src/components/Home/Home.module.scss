@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.wrapper {
+  background-color: $cream;
+
+  .container {
+    max-width: $desktop-width;
+
+    @include breakpoint(large) {
+      max-width: 900px;
+    }
+    @include breakpoint(medium) {
+      max-width: 600px;
+    }
+    @include breakpoint(small) {
+      max-width: 400px;
+    }
+
+    margin: auto;
+    padding: 12px 0 32px;
+
+    @include breakpoint(medium) {
+      padding: 0 12px 10px 12px;
+    }
+
+    .title {
+      color: $orange;
+      padding: 0 0 12px 12px;
+      margin: 0;
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    .card {
+      background-color: $white;
+      padding: 24px 16px;
+      display: flex;
+      gap: 12px;
+
+      @include breakpoint(medium) {
+        flex-direction: column;
+        padding: 12px;
+      }
+    }
+  }
+}

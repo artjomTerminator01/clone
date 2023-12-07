@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.wrapper {
+  background-color: $cream;
+
+  .container {
+    max-width: $desktop-width;
+    margin: auto;
+    padding: 12px 0 32px;
+
+    @include breakpoint(large) {
+      max-width: 900px;
+    }
+    @include breakpoint(medium) {
+      max-width: 600px;
+    }
+    @include breakpoint(small) {
+      max-width: 400px;
+    }
+
+    .title {
+      color: $orange;
+      padding: 0 0 12px 12px;
+      margin: 0;
+      font-size: 32px;
+      font-weight: 800;
+    }
+
+    .tabsWrapper {
+      display: flex;
+      @include breakpoint(medium) {
+        margin: 0 12px;
+      }
+      .tab {
+        background-color: $grey;
+        margin: 0;
+        padding: 14px;
+        cursor: pointer;
+
+        &__selected {
+          background-color: $white;
+        }
+      }
+    }
+
+    .card {
+      background-color: $white;
+      padding: 20px;
+      gap: 12px;
+      margin-bottom: 10px;
+
+      @include breakpoint(medium) {
+        margin: 0 12px 10px 12px;
+        padding: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../styles/variables";
+
+.backdrop {
+  background-color: rgba($dark-grey, 0.4);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}

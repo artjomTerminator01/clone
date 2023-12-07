@@ -1,0 +1,92 @@
+@import "../../../styles/variables";
+
+.cardWrapper {
+  width: 100%;
+  background-color: $cream;
+
+  .colorHeader {
+    padding: 10px;
+    position: relative;
+
+    h4 {
+      margin: 0;
+      color: $white;
+    }
+    .triangleDown {
+      position: absolute;
+      bottom: -13px;
+      left: 20px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+
+      &__blue {
+        border-top: 14px solid $blue;
+      }
+
+      &__yellow {
+        border-top: 14px solid $yellow;
+      }
+
+      &__purple {
+        border-top: 14px solid $purple;
+      }
+    }
+  }
+
+  .textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 12px;
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .text {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    .pointWrapper {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .bullet {
+        background: $purple;
+        display: inline-block;
+        height: 6px * 2;
+        width: 6px;
+        border-bottom-right-radius: 6px * 2;
+        border-top-right-radius: 6px * 2;
+      }
+    }
+
+    .readMore {
+      font-size: 12px;
+      color: $dark-aqua;
+      text-decoration: none;
+      margin: 0;
+      cursor: pointer;
+
+      &__triangle {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .blue {
+    background-color: $blue;
+  }
+
+  .yellow {
+    background-color: $yellow;
+  }
+
+  .purple {
+    background-color: $purple;
+  }
+}
